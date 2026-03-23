@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Odd or Even Game</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="bg-grid"></div>
+
+  <div class="wrapper">
+    <header>
+      <h1 class="logo">HAND <span>GAME</span></h1>
+      <p class="tagline">Odd or Even Challenge</p>
+    </header>
+
+    <div class="scoreboard">
+      <div class="score-card player">
+        <span class="score-label">Player</span>
+        <span id="playerScore" class="score-value">0</span>
+      </div>
+
+      <div class="vs-divider">VS</div>
+
+      <div class="score-card computer">
+        <span class="score-label">CPU</span>
+        <span id="computerScore" class="score-value">0</span>
+      </div>
+    </div>
+
+    <div id="gameArea" class="game-area">
+
+      <div class="step">
+        <span class="step-label">Choose Odd or Even</span>
+
+        <div class="choice-buttons">
+          <button id="btnOdd" class="choice-btn" onclick="selectParity('Odd')">ODD</button>
+          <button id="btnEven" class="choice-btn" onclick="selectParity('Even')">EVEN</button>
+        </div>
+      </div>
+
+      <div class="step">
+        <span class="step-label">Pick Fingers</span>
+
+        <div class="finger-buttons">
+          <button class="finger-btn" onclick="selectFingers(1)">1</button>
+          <button class="finger-btn" onclick="selectFingers(2)">2</button>
+          <button class="finger-btn" onclick="selectFingers(3)">3</button>
+          <button class="finger-btn" onclick="selectFingers(4)">4</button>
+          <button class="finger-btn" onclick="selectFingers(5)">5</button>
+        </div>
+      </div>
+
+      <button id="throwBtn" class="throw-btn" onclick="throwHands()">
+        THROW
+      </button>
+
+    </div>
+
+    <div class="result-panel">
+
+      <div class="result-row">
+        <div class="result-item">
+          <span class="ri-label">Choice</span>
+          <span id="resUserChoice" class="ri-value">-</span>
+        </div>
+
+        <div class="result-item">
+          <span class="ri-label">Your Fingers</span>
+          <span id="resUserFingers" class="ri-value">-</span>
+        </div>
+
+        <div class="result-item">
+          <span class="ri-label">CPU Fingers</span>
+          <span id="resCpuFingers" class="ri-value">-</span>
+        </div>
+
+        <div class="result-item">
+          <span class="ri-label">Sum</span>
+          <span id="resSum" class="ri-value">-</span>
+        </div>
+      </div>
+
+      <div id="finalResult" class="final-result">
+        <span id="finalText">Make your move 👆</span>
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
